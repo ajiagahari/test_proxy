@@ -18,6 +18,6 @@
   "dependencies": {
     "es6-promise": "^4.2.5",
     "express": "^4.16.4",
-    "fetch": "^1.1.0",
+    "fetch": "^1.1.0"
   }
 }

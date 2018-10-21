@@ -1,6 +1,5 @@
 const express = require('express')
 var path    = require("path")
-var Buffer = require('buffer/').Buffer
 const app = express()
 const port = 3000
 require('es6-promise').polyfill();
