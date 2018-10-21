@@ -1,6 +1,6 @@
 # test_proxy
 
-#1st add all dependencies
+# 1st add all dependencies
 open the directory using terminal
 type
 `npm install`
