@@ -9,9 +9,11 @@
 <body>
   <div style="margin:100px;">
     <div class="jumbotron"  style="padding:40px;">
-      <iframe 
-        src="/https://www.forbes.com" 
+      <iframe
+        id="test"
+        src="/https://www.forbes.com"
         frameborder="0" allowfullscreen
+        onload="load(this);"
         style="position:absolute;top:0;left:0;width:100%;height:90%;"></iframe>
     </div>
     <div>
@@ -19,4 +21,20 @@
     </div>
   </div>
 </body>
+
+  <script type="text/javascript">
+    function load(e) {
+      var parent = e;
+      console.log($("#test").contents())
+      $("#test").contents().on("click", function(e) {
+        e.preventDefault()
+        //do something
+        if(e.target.href){
+          var url = "/"+e.target.href.substring(0,e.target.href.length-1)
+          document.getElementById('test').contentWindow.location.replace(url)
+        }
+      });
+    }
+
+  </script>
 </html>
